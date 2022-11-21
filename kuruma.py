@@ -441,11 +441,11 @@ def delete() :
                             del carList[i]
                             showTable()
                             print ('\n***  Data berhasil dihapus  ***')
-                            break
+                            delete()
                         elif checker == 'tidak' :
                             showTable()
                             print ('\n***  Data tidak dihapus  ***')
-                            break
+                            delete()
                         else :
                             print('\n*** Input salah, silakan masukan ya/tidak ***\n')
                 elif plateNum != carList[i]['Plate'] :
