@@ -258,33 +258,33 @@ def create() :
                     if carList[i]['Plate'] == newPlate :
                         print ('\n***  Data sudah ada  ***')
                         break
-                    else :
-                        print('\n*** Silakan masukan data mobil yang akan ditambahkan ***')
-                        newModel = input('Masukan jenis mobil: ').title()
-                        newTrans = input('Masukan jenis transmisi mobil: ').capitalize()
-                        newColor = input('Masukan warna mobil: ').capitalize()
-                        newPrice = int(input('Masukan harga sewa per hari: '))
-                        while True :
-                            checker = input('Apakah Anda yakin akan menyimpan data ini? (ya/tidak) ').lower()
-                            if checker == 'ya' :
-                                carList.append ({
-                                'Plate' : newPlate,
-                                'Model' : newModel,
-                                'Transmission' : newTrans,
-                                'Color' : newColor,
-                                'Price' : newPrice,
-                                'Status' : 'Available'        
-                                })
-                                showTable()
-                                print ('\n***  Data berhasil disimpan  ***')
-                                break
-                            elif checker == 'tidak' :
-                                showTable()
-                                print ('\n***  Data tidak disimpan  ***')
-                                break
-                            else :
-                                print('\n*** Input salah, silakan masukan ya/tidak ***\n')
-                    break            
+                else :
+                    print('\n*** Silakan masukan data mobil yang akan ditambahkan ***')
+                    newModel = input('Masukan jenis mobil: ').title()
+                    newTrans = input('Masukan jenis transmisi mobil: ').capitalize()
+                    newColor = input('Masukan warna mobil: ').capitalize()
+                    newPrice = int(input('Masukan harga sewa per hari: '))
+                    while True :
+                        checker = input('Apakah Anda yakin akan menyimpan data ini? (ya/tidak) ').lower()
+                        if checker == 'ya' :
+                            carList.append ({
+                            'Plate' : newPlate,
+                            'Model' : newModel,
+                            'Transmission' : newTrans,
+                            'Color' : newColor,
+                            'Price' : newPrice,
+                            'Status' : 'Available'        
+                            })
+                            showTable()
+                            print ('\n***  Data berhasil disimpan  ***')
+                            break
+                        elif checker == 'tidak' :
+                            showTable()
+                            print ('\n***  Data tidak disimpan  ***')
+                            break
+                        else :
+                            print('\n*** Input salah, silakan masukan ya/tidak ***\n')
+                break            
         elif (pilih2 == '2') :
             mainMenu()
         else :
